@@ -1,0 +1,296 @@
+
+:root {
+    --lightgreen: #9dea90;
+    --darkgreen: rgba(0, 255, 128, 0.4);
+    --white: #ffffff;
+    --darkgrey: #191919
+  }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Arial, Helvetica;
+    background-color: var(--darkgrey);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+
+
+/*----NAVIGATION----*/
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+
+}
+
+nav a {
+    font-family: sans-serif, Arial, Helvetica;
+    height: 40px;
+    line-height: 60px;
+    margin: 15px;
+    padding: 0px 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 1px;
+    transition: 0.6s ease;
+}
+
+nav a:hover {
+    border-bottom: 1px solid var(--lightgreen);
+    box-shadow: 5px 10px 30px var(--darkgreen);
+}
+
+.active {
+    border-bottom: 1px solid var(--lightgreen);
+    box-shadow: 5px 10px 30px var(--darkgreen);
+}
+
+/*----HERO----*/
+
+.hero {
+    display: flex;
+    height: 600px;
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin: 60px;
+    margin-top: 30px;
+    color: var(--white);
+}
+
+.hero h2 {
+    font-size: 84px;
+    margin: 60px;
+    color: var(--white);
+}
+
+.hero h2 span {
+    color: var(--lightgreen);
+}
+
+.hero p {
+    color: var(--white);
+    font-size: 24px;
+    margin-left: 60px;
+}
+
+.hero div {
+    flex: 0 0 45%;
+}
+
+.hero img {
+    flex: 0 0 45%;
+    transform: translate(40%, -10%);
+}
+
+/*----MAIN SECTION FORMATTING----*/
+/* -align items - fills the vertical of the horizontal */
+.section-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 0 1em #000000;
+    padding: 10px;
+    margin: 0 60px 20px 60px ;
+    /* line-height: 25px; */
+    color: var(--white);
+    align-items: stretch; 
+
+}
+
+/*----ABOUT/WORK SECTION FORMATTING----*/
+.section-area h3 {
+    flex: 0 0 20%;
+    text-align: right;
+    /* margin-left: 30px;
+    margin-right: 200px; */
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 50px;
+    color: var(--lightgreen);
+}
+
+/* .section-area h4 {
+    margin-left: 30px;
+    margin-right: 200px;
+    padding: 30px;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 50px;
+    color: var(--lightgreen);
+} */
+
+.section-area p {
+    margin-right: 30px;
+}
+
+.section-area div {
+    flex: 0 0 70%;
+}
+
+/*----CONTACT SECTION */
+
+.row {
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row>.column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* CONTACT FORM */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: var(--lightgreen);
+    color: #191919;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    border-bottom: 1px solid #000000;
+    box-shadow: 5px 10px 30px var(--darkgreen);
+}
+
+/* CONTACT CONTAINER */
+.contact-container {
+    border-radius: 5px;
+    background-color: var(--darkgrey);
+    padding: 10px;
+}
+
+.contact-container p {
+    text-align: left;
+}
+
+/* Create two columns that float next to eachother */
+.contact-column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.contact-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*----FOOTER SECTION----*/
+.footer {
+    position: absolute;
+    margin-bottom: 10px;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 20px;
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h6 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 10px;
+    font-size: 14px;
+    color: var(--white);
+}
+
+
+/*----RESPONSIVE LAYOUTS----*/
+
+/* makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}

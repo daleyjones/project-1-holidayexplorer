@@ -1,0 +1,95 @@
+<!--HTML SKELETON-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Faduma Abdi Portfolio</title>
+    <link rel="stylesheet" href="./Fstyle.css">
+</head>
+
+<!--HEADER + NAVIGATION-->
+
+<body>
+
+    <img src="/MyPortfolio/images/logo.png" alt="logo" width="80px" height="80px">
+
+    <header>
+
+        <nav>
+            <a class="active" href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!--HERO-->
+
+        <section class="hero">
+
+            <div>
+                <h1>Hi! Welcome to my Portfolio.</h1>
+                <h2>I'm <span>Faduma</span> Abdi</h2>
+                <p>A Full-Stack Web Developer in Development...</p>
+            </div>
+
+            <img src="/MyPortfolio/images/hero.png" alt="hero-img" />
+        </section>
+
+    </header>
+
+    <main>
+
+        <!--ABOUT ME SECTION-->
+
+
+        <section id="about" class="section-area">
+            <h3> About Me </h3>
+            <div>
+                <p> About infot </p>
+            </div>
+        </section>
+
+
+        <!-- </section> -->
+
+        <!--CONTACT SECTION-->
+
+        <section id="contact" class="section-area">
+            <h3> Contact Me </h3>
+
+            <div class="contact-container">
+                <div style="text-align:center">
+                    <p>If you would like to get in touch regarding any future projects, please leave me a message below:
+                    </p>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-column">
+                        <form action="/action_page.php">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email..">
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:170px"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER SECTION-->
+        <footer class="footer-content">
+            <h6>Faduma Abdi</h6>
+            <p> A Full-Stack Web Development Student</p>
+            <p> Copyright &copy;2023 <a href=”#”>Faduma Abdi</a> </p>
+        </footer>
+    </main>
+</body>
+
+</html>

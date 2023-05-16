@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="active" href="#about">About</a>
+            <a href="#weather">Weather</a>
+            <a href="#Map">Map</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="map"></div>
+
+        <div class="search-container">
+            <input type="text" id="searchText" name="q" placeholder="Search...">
+            <button id="searchButton">Search</button>
+        </div>
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA&callback=initMap&v=weekly"
+        defer></script>
+    <script src="map.js"></script>
+</body>
+
+</html>
+
+
+
+

@@ -2,14 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Google Maps App</title>
+    <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Google Maps App</h1>
-    <div id="map"></div>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
 
+    <main>
+      <aside>
+        <h1>Search for city:</h1>
+        <div class="search-sect">
+          <input type="text" id="location" placeholder="Enter a location" />
+          <button id="search">Search</button>
+          <div id="error"></div>
+        </div>
+        <hr />
+        <div class="recent-sect">
+          <ul id="recent-locations"></ul>
+        </div>
+      </aside>
+
+      <section>
+        <div id="weather">
+          <div class="weather-icon">
+            <div class="weather-location" id="location-name">
+              Enter a location
+            </div>
+            <i id="weather-icon" class="fas"></i>
+            <div class="search-history"></div>
+          </div>
+
+          <div class="weather-info">
+            <div class="temperature">
+              <span>Temperature:</span>
+              <span id="temp-value"></span>
+            </div>
+
+            <div class="wind">
+              <span>Wind:</span>
+              <span id="wind-value"></span>
+            </div>
+            <div class="humidity">
+              <span>Humidity:</span>
+              <span id="Humid-value"></span>
+            </div>
+          </div>
+        </div>
+
+        <div id="forecast">
+          <h1>5-day Forecast</h1>
+          <div id="forecast-container"></div>
+        </div>
+      </section>
+    </main>
     <script src="script.js"></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> -->
   </body>
 </html>

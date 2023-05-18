@@ -30,8 +30,9 @@ User-friendly interface with intuitive navigation and visually appealing design.
 Stretch Goal: Additional weather-related information like UV index, air quality index, pollen count, or sunrise/sunset times.
 Please note that these two projects, Holiday Explorer and the Weather App, have distinct functionalities and features. Holiday Explorer focuses on exploring holiday destinations and providing local recommendations, while the Weather App focuses on delivering real-time weather information and forecasts.
 
-**Screenshot:**
-[screenshot here]
+# Screenshot
+![Screenshot of my project.](./holidayexplorer.png)
 
-**GitHub Repository:** [Link to the GitHub repository]
-**Deployed Application:** [Link to the deployed application on GitHub Pages]
+**GitHub Repository:** [https://github.com/daleyjones/project-1.git]
+
+**Deployed Application:** [https://daleyjones.github.io/project-1/]

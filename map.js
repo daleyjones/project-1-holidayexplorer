@@ -6,18 +6,13 @@ let infowindow;
 
 var searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", function () {
-    var searchText = document.getElementById("searchText").value;
+var searchText = document.getElementById("searchText").value;
 
     console.log(searchText);
     lookupLocation(searchText);
-    //geocodeAddress(searchText);
 });
 
 function getPlaceData() {
-    // create a reference the search text
-
-    // get the search text
-    // pass the search text to the lookup location
     var input = getElementById("mapsearch");
     t.input.textcontent.addEventListener("onclick");
     prompt(lookupLocation);
@@ -144,7 +139,7 @@ function lookupLocation(location) {
         mode: "no-cors",
     };
     fetch(
-        `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${location}&types=establishment&location=37.76999%2C-122.44696&radius=500&key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA`
+        `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${location}&types=establishment&location=37.76999%2C-122.44696&radius=500&key=${mapsAPIKey}`
     )
         .then((response) => response.json())
         .then((result) => getPlaceId(result));
@@ -178,3 +173,32 @@ function geocodePlaceId(placeId) {
         .catch((e) => window.alert("Geocoder failed due to: " + e));
 }
 window.initMap = initMap;
+
+// Chatgpt API
+
+  function Chatgpt() {
+    var chatSearch = document.getElementById('chatSearch');
+    var reply = chatSearch.value;
+
+    fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${cgptapiKey}`
+      },
+            
+      body: JSON.stringify({
+        'model': 'gpt-3.5-turbo',
+        'messages': [{'role': 'system', 'content': 'You are a user'}, {'role': 'user', 'content': reply}]
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      var chatMessages = document.getElementById('information');
+      chatMessages.innerHTML += '<b>You:</b> ' + reply + '<br>';
+      chatMessages.innerHTML += '<b>Holiday Help</b> ' + data.choices[0].message.content + '<br>';
+    })
+    .catch(err => console.error('Error:', err));
+
+    chatSearch.value = '';
+  }

@@ -1,0 +1,242 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: white;
+    background-color: white;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.logo {
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: lightskyblue;
+    
+}
+
+
+input {
+    outline: none;
+    border: none;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow:dark blue(0, 0, 0, 0.2) 5px 10px 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+nav a {
+    font-family: sans-serif, Arial, Helvetica;
+    height: 40px;
+    line-height: 60px;
+    margin: 15px;
+    padding: 0px 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: lightskyblue;
+    font-size: x-large;
+    letter-spacing: 1px;
+    transition: 0.6s ease;
+}
+nav a:hover {
+    border-bottom: 1px solid darkblue;
+    box-shadow: 5px 10px 30px lightblue;
+}
+.active {
+    border-bottom: 1px solid var(--lightgreen);
+    box-shadow: 5px 10px 30px var(--darkgreen);
+}
+
+.hero {
+    display: flex;
+    height: 600px;
+    width: 100%;
+    background-size: auto;
+    background-position: center;
+    background-image: url("./images/background.jpg");
+    
+}
+.hero h1 {
+    font-size: 24px;
+    margin: 60px;
+    margin-top: 30px;
+    color: darkcyan
+}
+.hero h2 {
+    font-size: 84px;
+    margin: 60px;
+    color: whitesmoke
+}
+.hero h2 span {
+    color: darkblue;
+}
+ p {
+    color: darkblue;
+    font-size: 24px;
+    margin-left: 60px;
+    font-style: bold;
+}
+.hero div {
+    flex: 0 0 45%;
+}
+ .hero img {
+    flex: 0 0 45%;
+    transform: translate(40%, -10%);
+} 
+
+.hero-image {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+.section-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 0 1em #000000;
+    padding: 10px;
+    margin: 0 60px 20px 60px ;
+  
+    color: var(--white);
+    align-items: stretch;
+}
+
+.section-area h3 {
+    flex: 0 0 20%;
+    text-align: right;
+    
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 50px;
+    color: var(--lightgreen);
+}
+
+.section-area p {
+    margin-right: 30px;
+    color: darkblue;
+}
+.section-area {
+    flex: 0 0 70%;
+}
+
+.section-area h3{
+color: lightskyblue;
+}
+.row {
+    margin: 8px -16px;
+}
+
+
+.row>.column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+   
+    color: #191919;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+input[type=submit] {
+    border-bottom: 1px solid blue;
+   
+}
+
+.contact-container {
+    border-radius: 5px;
+ 
+    padding: 10px;
+}
+.contact-container p {
+    text-align: left;
+}
+
+.contact-column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+
+
+.footer {
+    position: absolute;
+    margin-bottom: 10px;
+    left: 0;
+    right: 0;
+    background: lightblue
+    height: auto;
+    width: 100vw;
+    padding-top: 20px;
+    
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}

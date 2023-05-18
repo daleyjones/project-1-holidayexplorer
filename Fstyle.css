@@ -3,7 +3,7 @@
     --lightgreen: #9dea90;
     --darkgreen: rgba(0, 255, 128, 0.4);
     --white: #ffffff;
-    --darkgrey: #191919
+    --darkgrey: #191919;
   }
 * {
     box-sizing: border-box;
@@ -75,6 +75,7 @@ nav a:hover {
     box-shadow: 5px 10px 30px var(--darkgreen);
 }
 
+
 /*----HERO----*/
 
 .hero {
@@ -113,10 +114,26 @@ nav a:hover {
     flex: 0 0 45%;
 }
 
-.hero img {
+/* .hero img {
     flex: 0 0 45%;
     transform: translate(40%, -10%);
-}
+} */
+
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./LOC_MDV_shutterstock_1938868960WebOriginalCompressed.webp");
+  
+    /* Set a specific height */
+    height: 100%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
 
 /*----MAIN SECTION FORMATTING----*/
 /* -align items - fills the vertical of the horizontal */
@@ -163,6 +180,39 @@ nav a:hover {
 
 .section-area div {
     flex: 0 0 70%;
+}
+
+/* rating */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.rating-box {
+  position: relative;
+  background: #fff;
+  padding: 25px 50px 35px;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.rating-box header {
+  font-size: 22px;
+  color: var(--darkgrey);
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.rating-box .stars {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.stars i {
+  color: var(--darkgrey);
+  font-size: 35px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.stars i.active {
+  color: var(--lightgreen);
 }
 
 /*----CONTACT SECTION */

@@ -1,0 +1,118 @@
+<!--HTML SKELETON-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Holiday Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="./Fstyle.css">
+  
+</head>
+
+<!--HEADER + NAVIGATION-->
+
+<body>
+
+    <img src="./logo-no-background.png" alt="logo" width="300px" height="55px" class="logo">
+
+    <header>
+
+        <nav>
+            <a class="active" href="#about">Home</a>
+            <a href="#work">Weather</a>
+            <a href="#contact">Maps</a>
+        </nav>
+
+        <!--HERO-->
+
+        <section class="hero">
+
+            <div>
+                <!-- <h1>Hi! Welcome to my Portfolio.</h1> -->
+                <h2>Your <span>Holiday</span> Explorer</h2>
+                <p> A holiday with good weather and even better destinations - Let's get planning!</p>
+            </div>
+
+            <img src="./Untitled design (1).png" alt="hero-img" />
+        </section>
+
+    </header>
+
+    <main>
+
+        <!--ABOUT ME SECTION-->
+
+
+        <section id="about" class="section-area">
+            <h3> About Us </h3>
+            <div>
+                <p> At HolidayExplorer we hope to provide you with the the essential tools required to plan your
+                    itinerary for your next spontaneous 5 day holiday. With our weather dash
+                    dashboard, you can view the 5 day weather forecast for any city you are visiting and also view what
+                    tourist destinations you may want to visit using our Maps Dashboard.
+                    With weather and maps all in one place, plan your next 5 day holiday itinerary with a few clicks!
+                </p>
+            </div>
+        </section>
+
+        <!--CONTACT SECTION-->
+
+        <section id="contact" class="section-area">
+            <h3> Contact Us </h3>
+
+            <div class="contact-container">
+                <div style="text-align:center">
+                    <p>If you would like to get in touch regarding any tips or questions regarding holiday destination
+                        planning, please leave us a message below :
+                    </p>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-column">
+                        <form action="/action_page.php">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email..">
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:170px"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section id="work" class="section-area">
+            <h3> Reviews </h3>
+            <div class="rating-box">
+                <p><header>How was your experience using Holiday Explorer?</header></p>
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+        </section>
+    
+
+
+        <!-- FOOTER SECTION-->
+        <footer class="footer-content">
+            <h6>Holiday Explorer</h6>
+            <p> Copyright &copy;2023 <a href=”#”>Holiday Explorer</a> </p>
+        </footer>
+    </main>
+
+    <script src="./home.js"></script>
+</body>
+
+</html>

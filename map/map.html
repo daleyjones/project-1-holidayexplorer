@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Maps</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mapstyles.css">
 </head>
 
 <body>
@@ -25,10 +25,28 @@
             <input type="text" id="searchText" name="q" placeholder="Search...">
             <button id="searchButton">Search</button>
         </div>
+        
+        <div id="information"></div>   
+
+        <input type="text" id="chatSearch" placeholder="Any questions regarding your holiday?">
+        <button onclick="Chatgpt()">Send</button>
     </main>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCr-Av0kS8QAYgzV2dOHJXomDn8rxTcsRA&callback=initMap&v=weekly"
-        defer></script>
+    <!-- JS used so that API key can be hidden in keys.js file -->
+    <script>
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${mapsAPIKey}&callback=initMap&v=weekly`
+            document.body.appendChild(script);
+            }
+            window.onload = loadScript;
+    </script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>    
+    <script src="keys.js"></script>
     <script src="map.js"></script>
 </body>
 

@@ -241,4 +241,8 @@ window.addEventListener('DOMContentLoaded', function() {
   if (previousMessages) {
     chatMessages.innerHTML = previousMessages;
   }
+
 });
+// Attach event listener to the save button
+var searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", save);

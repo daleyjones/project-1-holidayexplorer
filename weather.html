@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="active" href="#about">About</a>
+        <a href="#weather">Weather</a>
+        <a href="#Map">Map</a>
+    </nav>
+    </header>
+
+    <main>
+      <aside>
+        <div class="search-section">
+          <input type="text" id="location" placeholder="Enter a location" />
+          <button id="search">Search</button>
+          <div id="error"></div>
+        </div>
+        <hr />
+        <div class="recent-section" id="recent-location">
+          <h2>Recent Searches:</h2>
+          <ul id="search-history">
+          </ul>
+        </div>
+      </aside>
+
+      <section>
+        <div id="weather">
+          <div class="weather-icon">
+            <img src="" alt="Weather Icon" id="current-weather-icon">
+            <div class="weather-location" id="location-name">Enter a Location</div>
+          </div>
+          <div class="weather-info">
+            <div class="temperature">
+              <span>Temperature:</span>
+              <span id="temp_value">-</span>
+            </div>
+            <div class="wind">
+              <span>Wind:</span>
+              <span id="wind_value">-</span>
+            </div>
+            <div class="humidity">
+              <span>Humidity:</span>
+              <span id="humid_value">-</span>
+            </div>
+            <div class="uv-index">
+              <span>UV Index:</span>
+              <span id="uvi_value">-</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="forecast">
+          <h1>5-Day Forecast</h1>
+          <div id="forecast-days"></div>
+        </div>
+      </div>
+      </section>
+    </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
+
+<!--This HTML code sets up the structure of a weather dashboard web page. It provides a user interface for searching and displaying weather information. 
+The page consists of a header with the title "Weather Dashboard" and a main section divided into an aside and a section.
+The aside section contains a search form where users can enter a location and a button to initiate the search. It also displays any error messages related to the search.
+Below the search section, there is a list of recent search history.
+The section displays the weather information for the searched location. 
+Initially, the weather and forecast containers are hidden. When a valid location is searched, the weather container becomes visible and shows the current weather information such as temperature, wind speed, humidity, and UV index. 
+It also displays an icon representing the weather condition.
+Below the current weather, there is a forecast section that shows a 5-day weather forecast. 
+Each day in the forecast is displayed with the date, temperature, wind speed, humidity, and a weather icon.
+The page includes JavaScript dependencies for Day.js library and a custom JavaScript file ("script.js") that handles the functionality of fetching and displaying weather data.
+Overall, this HTML code sets up the structure and basic functionality of a weather dashboard web page, allowing users to search for weather information and view both current and forecasted weather data.-->

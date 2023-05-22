@@ -1,0 +1,238 @@
+:root {
+  --lightgreen: #2216c5;
+  --darkgreen: rgba(43, 14, 209, 0.4);
+}
+
+/* Reset some default styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Apply some basic styles to the body */
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  /* Center the main content vertically and horizontally */
+  
+  main {
+    background-image: url("weatherblue.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 92.5vh;
+  }
+  
+  /* Style the header */
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+
+
+/*----NAVIGATION----*/
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 30px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+
+}
+
+nav a {
+    font-family: sans-serif, Arial, Helvetica;
+    height: 40px;
+    line-height: 60px;
+    margin: 15px;
+    padding: 0px 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 1px;
+    transition: 0.6s ease;
+}
+
+nav a:hover {
+    border-bottom: 1px solid var(--lightgreen);
+    box-shadow: 5px 10px 30px var(--darkgreen);
+}
+
+.active {
+    border-bottom: 1px solid var(--lightgreen);
+    box-shadow: 5px 10px 30px var(--darkgreen);
+}
+  
+  /* Style the aside section */
+  
+  aside {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5rem;
+    margin-right: 1rem;
+    min-width: 300px;
+    margin-top: 8px;
+  }
+  
+  .search-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-section input {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-section button {
+    padding: 1rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .recent-section {
+    margin-top: 1rem;
+  }
+  
+  .recent-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .recent-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recent-section li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .recent-section a {
+    color: #2196f3;
+  }
+  
+  /* Style the weather section */
+  
+  #weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0 auto; /* Add this line to horizontally center the element */
+    margin-top: 2vh; /* Adjust the margin-top value to vertically center the element */
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .weather-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .weather-location {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+  }
+  
+  .temperature,
+  .wind,
+  .humidity,
+  .uv-index {
+    display: flex;
+    justify-content: space-between;
+    width: 110%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .temperature span,
+  .wind span,
+  .humidity span,
+  .uv-index span {
+    font-weight: bold;
+  }
+  
+  /* Style the forecast section */
+  
+  #forecast {
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden; /* Hide horizontal overflow */
+  }
+  
+  #forecast-days {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px; /* Add some padding to prevent the horizontal scrollbar from overlapping with the forecast days */
+  }
+  
+  .forecast-day {
+    flex: 0 0 calc(20% - 10px); /* Each forecast day takes up 20% of the available width minus margin */
+    margin-right: 10px;
+  }
+  
+  
+
+  /* This is the overall design code for my weather dashboard */

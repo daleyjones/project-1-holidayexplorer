@@ -31,9 +31,7 @@ searchButton.addEventListener("click", function () {
   lookupLocation(searchText);
 });
 
-// Attach event listener to the save button
-var saveButton = document.getElementById("saveButton");
-saveButton.addEventListener("click", save);
+
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -103,4 +101,8 @@ window.addEventListener('DOMContentLoaded', function() {
   if (previousMessages) {
     chatMessages.innerHTML = previousMessages;
   }
+
 });
+// Attach event listener to the save button
+var searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", save);

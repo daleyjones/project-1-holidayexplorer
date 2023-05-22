@@ -28,7 +28,7 @@ var searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", function () {
   var searchText = document.getElementById("searchText").value;
   console.log(searchText);
-  lookupLocation(searchText);
+  lookUpLocation(searchText);
 });
 
 // Attach event listener to the save button
@@ -161,7 +161,7 @@ function save() {
   localStorage.setItem("searchText", searchText);
 }
 
-function lookupLocation(location) {
+function lookUpLocation(location) {
     var requestOptions = {
         method: "GET",
         mode: "no-cors",

@@ -1,6 +1,6 @@
 :root {
-  --lightgreen: #2216c5;
-  --darkgreen: rgba(43, 14, 209, 0.4);
+  --lightblue: #2216c5;
+  --darkblue: rgba(43, 14, 209, 0.4);
 }
 
 /* Reset some default styles */
@@ -87,15 +87,10 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 1px solid var(--lightgreen);
-    box-shadow: 5px 10px 30px var(--darkgreen);
+    border-bottom: 1px solid var(--lightblue);
+    box-shadow: 5px 10px 30px var(--darkblue);
 }
 
-.active {
-    border-bottom: 1px solid var(--lightgreen);
-    box-shadow: 5px 10px 30px var(--darkgreen);
-}
-  
   /* Style the aside section */
   
   aside {

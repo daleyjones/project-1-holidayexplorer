@@ -1,19 +1,19 @@
 :root {
-    --lightgreen: #9dea90;
-    --darkgreen: rgba(0, 255, 128, 0.4);
+    --darkBlue: #0a5aef;
+    --lightBlue: rgba(59, 146, 232, 0.4);
 }
 
 /* Reset styles */
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 2px;
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.4;
-    background-color: #f2f2f2;
+    background-color:var(--lightBlue);
 }
 
 header {
@@ -24,6 +24,35 @@ header {
     align-items: center;
 }
 
+input[type="text"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 20%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #37a0f1;
+}
+button {
+    background-color:#4285f4;
+    color: #fff;
+    padding: 10px 20px;
+    margin:5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e53e23;
+  }
+  
 
 a {
     text-decoration: none;
@@ -34,11 +63,41 @@ input {
     border: none;
 }
 
-
+/* CSS for search history */
+#searchHistory {
+    margin-top: 20px;
+  }
+  
+  #searchHistory h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #searchHistory ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #searchHistory li {
+    margin-bottom: 5px;
+  }
+  
+  #searchHistory li::before {
+    content: "• ";
+    color: #555555;
+  }
+  
+  #searchHistory p {
+    color: #555555;
+    font-style: italic;
+  }
+  
 
 /*----NAVIGATION----*/
 
 nav {
+    background-color: #ffffff;
+    color:var(--darkBlue);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -66,13 +125,13 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 1px solid var(--lightgreen);
-    box-shadow: 5px 10px 30px var(--darkgreen);
+    border-bottom: 1px solid var(--lightBlue);
+    box-shadow: 5px 10px 30px var(--darkBlue);
 }
 
 .active {
-    border-bottom: 1px solid var(--lightgreen);
-    box-shadow: 5px 10px 30px var(--darkgreen);
+    border-bottom: 1px solid var(--lightBlue);
+    box-shadow: 5px 10px 30px var(--darkBlue);
 }
 
 main {
@@ -117,7 +176,7 @@ main {
 }
 
 #searchButton:hover {
-    background-color: #3367d6;
+    background-color: #e53e23;
 }
 
 @media only screen and (max-width: 600px) {

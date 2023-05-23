@@ -42,14 +42,6 @@ function loadSearchFromLocalStorage() {
     document.getElementById('searchText').value = searchData;
 };
 
-// search history clear button function
-document.getElementById('clearButton').addEventListener('click', clearSearchHistory);
-
-function clearSearchHistory() {
-    localStorage.removeItem('searchHistory');
-    var searchList = document.getElementById('searchList');
-    searchList.textContent = '';
-}
 
 // Attach event listener to the save button
 var saveButton = document.getElementById("searchButton");
@@ -268,11 +260,11 @@ window.addEventListener('DOMContentLoaded', function() {
 var searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", save);
 
-
+// clearChatButton function
 document.getElementById('chatClearButton').addEventListener('click', clearChatHistory);
 
 function clearChatHistory() {
-    localStorage.removeItem('information');
-    var replyhistory = document.getElementById('chatsearch');
+    localStorage.removeItem('chatMessages');    
+    var replyhistory = document.getElementById('information');
     replyhistory.textContent = '';
 }

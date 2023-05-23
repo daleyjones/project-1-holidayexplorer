@@ -3,12 +3,15 @@ let map;
 let geocoder;
 let infowindow;
 
+var mpsearch = [];
+
 // Check if map data exists in local storage and load it
 function loadMapFromLocalStorage() {
   const mapData = localStorage.getItem('mapData');
   if (mapData) {
     const parsedMapData = JSON.parse(mapData);
     // Set map center and zoom level from local storage
+    console.log(map);
     map.setCenter(parsedMapData.center);
     map.setZoom(parsedMapData.zoom);
   }
@@ -27,9 +30,17 @@ function saveMapToLocalStorage() {
 var searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", function () {
   var searchText = document.getElementById("searchText").value;
+  localStorage.setItem('searchText', searchText)
   console.log(searchText);
   lookUpLocation(searchText);
+  loadSearchFromLocalStorage();
 });
+
+// loads last search in search bar when page refreshes
+function loadSearchFromLocalStorage() {
+    const searchData = localStorage.getItem('searchText', searchText); 
+    document.getElementById('searchText').value = searchData;
+};
 
 // Attach event listener to the save button
 var saveButton = document.getElementById("searchButton");
@@ -150,6 +161,7 @@ for (let i = 0; i < features.length; i++) {
 
   // Load map data from local storage
   loadMapFromLocalStorage();
+  loadSearchFromLocalStorage();
 
   // Attach event listener to map's idle event to save map data
   map.addListener('idle', saveMapToLocalStorage);

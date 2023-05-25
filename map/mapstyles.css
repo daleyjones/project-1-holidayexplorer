@@ -80,9 +80,6 @@ input {
 #searchHistory {
     color: navy;
     margin-top: 20px;
-    float: left;
-    width: 30%; /* Adjust the width as needed */
-    margin-right: 20px; /* Add some space between the aside and other content */
   }
   
   #searchHistory h3 {

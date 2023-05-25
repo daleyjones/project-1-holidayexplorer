@@ -33,6 +33,6 @@ Please note that these two projects, Holiday Explorer and the Weather App, have 
 # Screenshot
 ![Screenshot of my project.](./holidayexplorer.png)
 
-**GitHub Repository:** [https://github.com/daleyjones/project-1.git]
+**GitHub Repository:** [https://github.com/daleyjones/project-1-holidayexplorer]
 
-**Deployed Application:** [https://daleyjones.github.io/project-1/]
+**Deployed Application:** [https://daleyjones.github.io/project-1-holidayexplorer/]

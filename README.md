@@ -41,6 +41,6 @@ To use this website is pretty simple. You have the homepage that contains the ra
 ![Screenshot of my project.](./images/holidayexplorer.png)
 ![Screenshot of my project.](./images/weatherPage.png)
 
-**GitHub Repository:** [https://github.com/daleyjones/project-1-holidayexplorer]
+**GitHub Repository:** [https://github.com/daleyjones/project-1.git]
 
-**Deployed Application:** [https://daleyjones.github.io/project-1-holidayexplorer/]
+**Deployed Application:** [https://daleyjones.github.io/project-1/]

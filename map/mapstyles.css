@@ -76,6 +76,7 @@ input {
     border: none;
 }
 #searchHistory {
+
  
   position: fixed;
   margin-top: 20px;
@@ -89,9 +90,9 @@ input {
   padding: 10px; 
   z-index: 999;
  
+
 }
 
-  
   #searchHistory h3 {
     color: rgb(255, 255, 255);
     font-size: 18px;
@@ -126,7 +127,7 @@ input {
 
 /*----NAVIGATION----*/
 main {
-    background-image: url("../planet.jpg");
+    background-image: url("planet.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

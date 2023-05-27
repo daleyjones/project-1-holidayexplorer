@@ -40,6 +40,7 @@ To use this website is pretty simple. You have the homepage that contains the ra
 
 ![Screenshot of my project.](./images/holidayexplorer.png)
 ![Screenshot of my project.](./images/weatherPage.png)
+![Screenshot of my project.](./images/mapPage.png)
 
 **GitHub Repository:** [https://github.com/daleyjones/project-1.git]
 

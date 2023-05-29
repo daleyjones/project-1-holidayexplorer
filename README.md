@@ -45,3 +45,5 @@ To use this website is pretty simple. You have the homepage that contains the ra
 **GitHub Repository:** [https://github.com/daleyjones/project-1.git]
 
 **Deployed Application:** [https://daleyjones.github.io/project-1/]
+
+**PowerPoint Presentation:** [https://1drv.ms/p/s!Am8iFsRr3St0lVibR-LIzAbWbpZc?e=PjAIwe]

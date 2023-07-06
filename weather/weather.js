@@ -50,21 +50,21 @@ function lookupLocation(search) {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      
 
       const { name, country, lat, lon } = data[0];
 
       const myData = { name, country, lat, lon };
 
-      console.log(myData);
+ 
 
       const weatherApiUrl = `${WEATHER_API_BASE_URL}/data/2.5/onecall?lat=${myData.lat}&lon=${myData.lon}&units=imperial&exclude=minutely,hourly&appid=${WEATHER_API_KEY}`;
-      console.log(weatherApiUrl);
+   
 
       fetch(weatherApiUrl)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+      
 
           displayCurrentWeather(data);
 
@@ -168,12 +168,12 @@ function displayWeatherForecast(weatherData) {
 const getWeather = (lat, lon) => {
 
   var apiUrl = `${WEATHER_API_BASE_URL}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${WEATHER_API_KEY}`;
-  console.log(apiUrl);
+  
   fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
 
-    console.log(data);
+    
 
     displayCurrentWeather(data);
 
@@ -194,21 +194,6 @@ const locationInput = document.getElementById('location');
 const searchButton = document.getElementById('search');
 
 searchButton.addEventListener('click', getLocation);
-
-// It sets up the base URL and API key for the OpenWeatherMap API.
-//The weather and forecast container elements are retrieved and initially hidden.
-//The getLocation() function is called when the search button is clicked. It validates the user's location input, displays an error if it's empty, and calls the lookupLocation() function.
-//Utility functions clearError() and setLocationError(text) handle error display and clearing.
-//The code retrieves recent search locations from local storage on page load, removes duplicates, and limits the list to 5 locations. The search history is then rendered.
-//The lookupLocation(search) function fetches weather data based on the search query, displays the weather and forecast containers, and fetches weather information from the API. It then displays the current weather, weather forecast, and adds the location to the search history.
-//Additional utility functions are provided: addToSearchHistory(location) adds a location to the search history, renderSearchHistory() renders the search history list, and removeDuplicates(arr) removes duplicate locations from an array.
-//The displayCurrentWeather(weatherData) function displays the current weather data in the HTML document.
-//The displayWeatherForecast(weatherData) function displays the weather forecast data in the HTML document.
-//The getWeather(lat, lon) function fetches weather data for a specific latitude and longitude and calls the display functions.
-//The displayWeather(weatherData) function displays the weather information for a specific location, including the location name and coordinates. It also calls getWeather() to fetch and display the detailed weather information.
-//Event listeners are set up for the search button to trigger the getLocation() function when clicked.
-
-
 
 
 

@@ -36,7 +36,7 @@ function displaySearchHistory() {
 var searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', function () {
   var searchText = document.getElementById('searchText').value;
-  console.log(searchText);
+  
   lookUpLocation(searchText);
   saveSearchHistory(searchText);
   displaySearchHistory(); // Update the search history display
@@ -76,7 +76,7 @@ function lookUpLocation(searchText) {
         title: searchText
       });
     } else {
-      console.log('Geocode was not successful for the following reason: ' + status);
+     
     }
   });
 }

@@ -11,7 +11,7 @@ function loadMapFromLocalStorage() {
   if (mapData) {
     const parsedMapData = JSON.parse(mapData);
     // Set map center and zoom level from local storage
-    console.log(map);
+  
     map.setCenter(parsedMapData.center);
     map.setZoom(parsedMapData.zoom);
   }
@@ -31,7 +31,7 @@ var searchButton = document.getElementById("searchButton");
 searchButton.addEventListener("click", function () {
   var searchText = document.getElementById("searchText").value;
   localStorage.setItem('searchText', searchText)
-  console.log(searchText);
+ 
   lookUpLocation(searchText);
   loadSearchFromLocalStorage();
 });
@@ -187,7 +187,7 @@ function lookUpLocation(location) {
 }
 
 function getPlaceId(result) {
-    console.log(result);
+   
     var placeId = result.predictions[0].place_id;
     geocodePlaceId(placeId);
 }

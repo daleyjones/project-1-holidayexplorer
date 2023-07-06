@@ -19,15 +19,14 @@ stars.forEach((star, index1) => {
                 rating = 0
             }
         });
-        console.log(rating)
-        // document.getElementById("rating-value").textContent = rating
+       
     });
 
 });
 function activeStarCount() {
     let rating = 0;
     const stars = document.querySelectorAll(".active");
-    console.log(stars);
+
     stars.forEach(() => rating++);
     return rating - 1;
   }
@@ -36,14 +35,14 @@ function activeStarCount() {
     const score = activeStarCount();
     reviews.push(score);
     localStorage.setItem("reviews", JSON.stringify(reviews));
-    console.log("done");
+   
     location.reload()
   }
   const submitBtn = document.getElementById("submit");
   submitBtn.addEventListener("click", storeReview);
 
   const data = JSON.parse(localStorage.getItem("reviews")) || [];
-// Create a bar chart
+
 
 
 const chartContainer = document.getElementById("chartContainer");
@@ -72,9 +71,9 @@ for (let index = 1; index < 6; index++) {
       bar.style.backgroundColor = "pink";
       break;
   }
-  //   bar.style.backgroundColor = "blue";
+ 
   bar.style.marginRight = "10px";
-  bar.style.height = count * 10 + "px"; // Adjust the height based on the count
+  bar.style.height = count * 10 + "px"; 
   chartContainer.appendChild(bar);
 }
 
